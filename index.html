@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!--=============== FAVICON ===============-->
+    <!-- <link rel="shortcut icon" href="assets/img/favi.png" type="image/x-icon"> -->
+
+    <!--=============== REMIX ICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Kevin Ochoa - Portafolio</title>
+  </head>
+  <body class="dark-theme">
+    <header class="profile container grid"></header>
+    <main class="main">
+      <section class="filters container">
+        <!--=============== FILTERS TABS ===============-->
+        <ul class="filters__content"></ul>
+
+        <div class="filters__sections">
+          <!--=============== PROJECTS ===============-->
+          <div
+            class="projects__content grid filters__active"
+            data-content
+            id="projects"
+          ></div>
+          <!--=============== SKILLS ===============-->
+          <div class="skills__content grid" data-content id="skills"></div>
+          <!--=============== JOBS ===============-->
+          <div class="jobs__content grid" data-content id="jobs"></div>
+        </div>
+      </section>
+    </main>
+    <!-- Theme and idiom button -->
+    <section class="toggle">
+      <button class="toggle__idiom" id="lang-button">
+        <i class="ri-english-input"></i>
+      </button>
+      <button class="toggle__theme" id="theme-button">
+        <i class="ri-moon-line"></i>
+      </button>
+    </section>
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

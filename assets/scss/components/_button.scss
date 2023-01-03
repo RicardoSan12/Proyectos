@@ -1,0 +1,20 @@
+/*=============== BUTTONS ===============*/
+.button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1.15rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease-in;
+  box-shadow: 0 8px 24px hsla(var(--hue), var(--sat), var(--lig), 0.25);
+
+  & i {
+    font-size: 1.25rem;
+  }
+
+  &:hover {
+    background-color: var(--first-color-alt);
+  }
+}
