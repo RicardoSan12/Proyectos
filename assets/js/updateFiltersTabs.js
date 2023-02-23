@@ -1,7 +1,6 @@
 /*=============== TAB BACKGROUND POSITION & RESIZE TAB BACKGROUND ===============*/
 export const updateTabBgPosition = () => {
-  const { clientWidth, offsetLeft } =
-    document.querySelector('.filter-tab-active');
+  const { clientWidth, offsetLeft } = document.querySelector('.filter-tab-active');
   const elementTabBg = document.querySelector('.filters__tab-bg');
   elementTabBg.style.width = `${clientWidth}px`;
   elementTabBg.style.transform = `translateX(${offsetLeft}px)`;

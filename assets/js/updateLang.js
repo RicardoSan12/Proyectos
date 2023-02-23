@@ -3,7 +3,7 @@ import { createSkillCategoryCard } from './components/skills';
 import { createJobCard } from './components/jobs';
 import { createCards } from './components/cards';
 import { createProfileCard } from './components/profile';
-import { createNavTabsCard } from './components/createNavTabsCard';
+import { createOrUpdateNavTabsCard } from './components/createOrUpdateNavTabsCard';
 
 import { updateTabBgPosition } from './updateFiltersTabs';
 import { updateLangData } from './data';
@@ -20,9 +20,10 @@ export const updateLang = ({ lang, update = false }) => {
   createCards(jobContainer, jobs, createJobCard, update);
   createCards(skillContainer, skills, createSkillCategoryCard, update);
   createCards(projectContainer, projects, createProjectCard, update);
-  profileContainer.innerHTML = createProfileCard(profile);
-  createNavTabsCard(tabs, update);
+
+  createProfileCard(profileContainer, profile)
+  createOrUpdateNavTabsCard(tabs, update);
 
   updateTabBgPosition();
 };
-
+ 

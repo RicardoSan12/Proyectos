@@ -1,4 +1,4 @@
-const createSocialLinksList = (socialLinks) => {
+const createSocialLinks = (socialLinks) => {
   return `
   <ul class="profile__social">
     ${socialLinks
@@ -12,9 +12,9 @@ const createSocialLinksList = (socialLinks) => {
   </ul>`;
 };
 
-export const createProfileCard = (profile) => {
+export function createProfileCard(container, profile) {
   const { image, name, about, socialLinks, cvName } = profile;
-  return `
+  container.innerHTML = `
     <div class="profile__perfil">
       <img src="${image}" alt="${name}" />
     </div>
@@ -24,10 +24,9 @@ export const createProfileCard = (profile) => {
         <input type="checkbox" id="more-about" />
         <label for="more-about">${about}</label>        
       </h3>      
-      ${createSocialLinksList(socialLinks)}
+      ${createSocialLinks(socialLinks)}
     </div>
     <a download="" href="assets/pdf/Kevin_Ochoa_CV.pdf" class="profile__button-cv button">
       ${cvName} (versión en español)<i class="ri-download-line"></i>
-    </a>
-`;
-};
+    </a>`;
+}

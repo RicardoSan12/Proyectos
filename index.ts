@@ -28,8 +28,6 @@ const handleClickLangButton = () => {
 updateLang({ lang: selectedLang });
 langButton.addEventListener('click', handleClickLangButton);
 
-/*=============== CHANGING IDIOM ===============*/
-import './index.js';
 /*=============== UPDATE FILTER TABS ===============*/
 const filtersContainer = document.querySelector('.filters');
 filtersContainer.addEventListener('click', handleClick);
@@ -51,14 +49,9 @@ const toggleTheme = () => {
 };
 
 const selectedTheme = localStorage.getItem('selected-theme');
-
 if (!selectedTheme) toggleTheme();
 
 themeButton.addEventListener('click', toggleTheme);
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 loadScrollAnimation();
-
-// import './assets/css/styles.css';
-// const appDiv: HTMLElement = document.getElementById('app');
-// appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
