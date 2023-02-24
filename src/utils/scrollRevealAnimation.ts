@@ -1,4 +1,4 @@
-import { ScrollReveal } from '../../assets/js/scrollreveal.min.js';
+import { ScrollReveal } from './scrollreveal.min';
 let delay = 400;
 const sr = ScrollReveal({
   origin: 'top',

@@ -1,16 +1,11 @@
 import {ContentTab} from '../types'
 
-interface ParamsUpdateTabLanguage{
-  tabElements: HTMLCollection;
-  tabs: ContentTab[];
-}
-
 interface Params {
-  tabs: ContentTab[];
-  update: boolean
+  updateTabLanguage: { tabElements: HTMLCollection; tabs: ContentTab[]; }
+  createNavTabsCard: { tabs: ContentTab[]; update: boolean; }
 }
 
-const updateTabLanguage = ({tabElements, tabs}: ParamsUpdateTabLanguage) => {
+const updateTabLanguage = ({tabElements, tabs}: Params['updateTabLanguage']) => {
   for (const tabElement of tabElements) {
     tabs.find(({ name, id }) => {
       const targetId = tabElement.getAttribute('data-target')
@@ -19,7 +14,7 @@ const updateTabLanguage = ({tabElements, tabs}: ParamsUpdateTabLanguage) => {
   }
 };
 
-export const createNavTabsCard = ({tabs, update}:Params) => {
+export const createNavTabsCard = ({tabs, update}:Params['createNavTabsCard']) => {
   const navTabsContainer = document.querySelector('.filters__content');
   if(!navTabsContainer) return 
   if (!update) {

@@ -1,4 +1,4 @@
-import './assets/scss/styles.scss';
+import './src/assets/styles.scss';
 import { handleClick, handleMediaChange } from './src/utils/updateFiltersTab';
 import { loadScrollAnimation } from './src/utils/scrollRevealAnimation';
 import { updateLang } from './src/utils/updateLang';
